@@ -4,5 +4,6 @@ lib/
 /swap.sh
 test/
 /platformio.ini
+.pio/
 
 
