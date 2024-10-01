@@ -3,5 +3,6 @@ lib/
 /pwd.sh
 /swap.sh
 test/
+/platformio.ini
 
 
