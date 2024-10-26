@@ -23,7 +23,7 @@ void sinelon();
 
 void setup() 
 {
-    Serial.begin(115200);
+    Serial.begin(9600);
     FastLED.addLeds<WS2812, DATA_PIN, GRB>(leds, NUM_LEDS).setRgbw(RgbwDefault());
     FastLED.setBrightness(BRIGHTNESS);  // Set global brightness to 50%
     delay(2000);  // If something ever goes wrong this delay will allow upload.
@@ -68,7 +68,8 @@ void juggle()
 
 void sinelon()
 {
-    fadeToBlackBy(leds, NUM_LEDS, 20);
+    fadeToBlackBy(leds, NUM_LEDS, 150);
     int pos = beatsin16(3, 0, NUM_LEDS-1);
+    Serial.println(pos);
     leds[pos] += CHSV(gHue, 255, 192);
 }
